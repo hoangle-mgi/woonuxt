@@ -18,6 +18,18 @@ query getOrder($id: ID!) {
     customer {
       email
     }
+    downloadableItems {
+      nodes {
+        name
+        product {
+          name
+          slug
+        }
+        url
+        accessExpires
+        downloadsRemaining
+      }
+    }
     lineItems {
       nodes {
         quantity
